@@ -7,14 +7,16 @@ class Quiz extends Component
   constructor(props)
   {
     super(props);
-    this.state = {quiz_position: 1};
+    this.state = { quiz_position: 1 };
   }
   render()
   {
-    <div>
-      Quiz
-      //<div className="QuizQuestion"></div>
-    </div>
+    return()
+    {
+      <div>
+        <div className="QuizQuestion"></div>
+      </div>
+    }
   }
 }
 
