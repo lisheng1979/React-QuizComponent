@@ -9,14 +9,12 @@ class Quiz extends Component
     super(props);
     this.state = { quiz_position: 1 };
   }
-  render()
-  {
-    return()
-    {
+  render() {
+    return (
       <div>
-        Quiz      
+        Quiz
       </div>
-    }
+    )
   }
 }
 
