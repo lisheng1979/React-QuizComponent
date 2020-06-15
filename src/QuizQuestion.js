@@ -3,6 +3,11 @@ import QuizQuestionButton from './QuizQuestionButton.js'
 
 class QuizQuestion extends Component
 {
+  handleClick(buttonText){
+    if(buttonText === this.props.quiz_question.answer) {
+      this.props.showNextQuestionHandler()
+    }
+  }
   render()
   {
     return (
@@ -13,7 +18,7 @@ class QuizQuestion extends Component
         <section className="buttons">
           <ul>
             { this.props.quiz_question.answer_options.map( (answer_options, index) => {
-                return <QuizQuestionButton key={index} button_text={answer_options}/>
+                return <QuizQuestionButton key={index} button_text={answer_options} clickHandler={this.handleClick.bind(this)}/>
             })}
           </ul>
         </section>
